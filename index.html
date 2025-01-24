@@ -43,9 +43,19 @@
         }
         .frozen-bubble {
             background: radial-gradient(circle at 30% 30%, 
-                rgba(135, 206, 250, 0.8) 0%, 
-                rgba(0, 191, 255, 0.8) 30%,
-                rgba(30, 144, 255, 0.9) 70%);
+                rgba(135, 206, 250, 0.9) 0%, 
+                rgba(0, 191, 255, 0.9) 30%,
+                rgba(30, 144, 255, 1) 70%);
+            border: 2px solid #00f7ff;
+            animation: float 2s infinite alternate ease-in-out;
+        }
+        .frozen-bubble::after {
+            content: '❄️';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
         }
         .bubble:hover {
             transform: scale(1.1);
@@ -376,4 +386,4 @@
         }
     </script>
 </body>
-</html>
+</html> 
